@@ -11,6 +11,8 @@ import { LoginPageComponent } from './authenticationPages/login-page/login-page.
 import { SignupPageComponent } from './authenticationPages/signup-page/signup-page.component';
 import { NavbarComponent } from './globalComponent/navbar/navbar.component';
 import { FooterComponent } from './globalComponent/footer/footer.component';
+import { InputBoxComponent } from './inputPage/input-box/input-box.component';
+import 'bootstrap';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { FooterComponent } from './globalComponent/footer/footer.component';
     LoginPageComponent,
     SignupPageComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    InputBoxComponent
   ],
   imports: [
     BrowserModule

@@ -1,0 +1,19 @@
+.footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    /* allways in the bottom */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+  }
+
+  /* select the image */
+    .footer img {
+        width: 80%;
+        /* center */
+        margin: 0 auto;
+        display: block;
+
+    }
+  
