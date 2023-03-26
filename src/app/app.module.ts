@@ -12,7 +12,11 @@ import { SignupPageComponent } from './authenticationPages/signup-page/signup-pa
 import { NavbarComponent } from './globalComponent/navbar/navbar.component';
 import { FooterComponent } from './globalComponent/footer/footer.component';
 import { InputBoxComponent } from './inputPage/input-box/input-box.component';
+
+import { Molecule } from 'openchemlib';
+
 import 'bootstrap';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,10 +31,12 @@ import 'bootstrap';
     SignupPageComponent,
     NavbarComponent,
     FooterComponent,
-    InputBoxComponent
+    InputBoxComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

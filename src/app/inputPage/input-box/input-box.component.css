@@ -15,3 +15,13 @@ button {
   border: 1px solid #000;
   border-radius: 10px;
 }
+
+.atom {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+}
+.count {
+  font-size: 1rem;
+  letter-spacing: 0;
+  vertical-align: baseline;
+}

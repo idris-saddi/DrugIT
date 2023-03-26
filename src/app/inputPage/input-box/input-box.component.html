@@ -7,16 +7,31 @@
             class="form-control form-control-lg"
             type="text"
             placeholder="Test your Molecule..."
-            id="inputLarge"
+            name="smiles"
+            [(ngModel)]="smiles"
+            (input)="convertSMILEStoBrute()"
           />
+          <div *ngIf="smiles && notValid" style="color: red;" >Invalid SMILES string.</div>
         </div>
         <div class="col-2">
-          <select class="form-select form-select-lg mb-3" aria-label="Default select example">
+          <select
+            class="form-select form-select-lg mb-3"
+            aria-label="Default select example"
+          >
             <option disabled selected>Target</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
           </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="d-flex flex-row-reverse">
+        <div class="card border-info" style="max-width: 20rem">
+          <div class="card-header">
+            <span [innerHTML]="bruteFormulaDisplay"></span>
+          </div>
         </div>
       </div>
     </div>
