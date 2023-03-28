@@ -1,5 +1,7 @@
 export class Molecule {
-  id: string; // formula
+  id: string;
+
+  formula: string;
 
   molecularWeight: number;
   logP: number;
@@ -18,6 +20,7 @@ export class Molecule {
 
   constructor(
     id = '',
+    formula = '',
     molecularWeight = 0,
     logP = 0,
     numHDonors = 0,
@@ -33,6 +36,7 @@ export class Molecule {
     deleted_at = ''
   ) {
     this.id = id;
+    this.formula = formula;
     this.molecularWeight = molecularWeight;
     this.logP = logP;
     this.numHDonors = numHDonors;
