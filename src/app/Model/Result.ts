@@ -1,4 +1,5 @@
 export class Result {
+    id: string;
 
     targetId: string;
     moleculeId: string;
@@ -10,6 +11,7 @@ export class Result {
     deleted_at: string;
 
     constructor(
+        id = '',
         targetId = '',
         moleculeId = '',
         active = false,
@@ -17,6 +19,7 @@ export class Result {
         updated_at = '',
         deleted_at = ''
     ) {
+        this.id = id;
         this.targetId = targetId;
         this.moleculeId = moleculeId;
         this.active = active;
