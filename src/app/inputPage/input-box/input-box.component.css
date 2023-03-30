@@ -25,3 +25,10 @@ button {
   letter-spacing: 0;
   vertical-align: baseline;
 }
+
+.error-mes {
+  position: fixed;
+  color: red;
+  padding: 10px;
+  z-index: 999;
+}

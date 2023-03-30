@@ -82,7 +82,8 @@ export const users: User[] = [
 // Sample molecules
 export const molecules: Molecule[] = [
     {
-        id: "C6H12O6",
+        id: "1",
+        formula: "C6H12O6",
         molecularWeight: 180.16,
         logP: -2.52,
         numHDonors: 5,
@@ -98,7 +99,8 @@ export const molecules: Molecule[] = [
         deleted_at: "null"
     },
     {
-        id: "C16H18N2O4S",
+        id: "2",
+        formula: "C16H18N2O4S",
         molecularWeight: 346.39,
         logP: 2.57,
         numHDonors: 2,
@@ -114,7 +116,8 @@ export const molecules: Molecule[] = [
         deleted_at: "null"
     },
     {
-        id: "C27H36O8",
+        id: "3",
+        formula: "C27H36O8",
         molecularWeight: 488.57,
         logP: 4.87,
         numHDonors: 4,
@@ -169,6 +172,7 @@ export const requests: Request[] = [
 // Sample results
 export const results: Result[] = [
     {
+        id: "1",
         targetId: "1",
         moleculeId: "C6H12O6",
         active: false,
@@ -177,6 +181,7 @@ export const results: Result[] = [
         deleted_at: "null"
     },
     {
+        id: "2",
         targetId: "1",
         moleculeId: "C16H18N2O4S",
         active: true,
@@ -185,6 +190,7 @@ export const results: Result[] = [
         deleted_at: "null"
     },
     {
+        id: "3",
         targetId: "1",
         moleculeId: "C27H36O8",
         active: true,

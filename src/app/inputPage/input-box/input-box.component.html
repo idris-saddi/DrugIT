@@ -11,7 +11,9 @@
             [(ngModel)]="smiles"
             (input)="convertSMILEStoBrute()"
           />
-          <div *ngIf="smiles && notValid" style="color: red;" >Invalid SMILES string.</div>
+          <div *ngIf="smiles && notValid" class="error-mes">
+            Invalid SMILES string.
+          </div>
         </div>
         <div class="col-2">
           <select
@@ -30,11 +32,17 @@
       <div class="d-flex flex-row-reverse">
         <div class="card border-info" style="max-width: 20rem">
           <div class="card-header">
-            <span [innerHTML]="bruteFormulaDisplay"></span>
+            <span [innerHTML]="bruteFormulaDisplay || 'bruteFormula'"></span>
           </div>
         </div>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary mb-2">Send</button>
+    <button
+      type="submit"
+      class="btn btn-primary mb-2"
+      [disabled]="(!smiles || notValid) && enableAtLoad"
+    >
+      Send
+    </button>
   </form>
 </div>

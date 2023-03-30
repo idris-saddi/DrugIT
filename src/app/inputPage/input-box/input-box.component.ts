@@ -10,31 +10,39 @@ export class InputBoxComponent {
   @Input() smiles: string;
   notValid: boolean;
   bruteFormulaDisplay: string;
+  enableAtLoad: boolean;
 
   constructor() {
     this.smiles = '';
-    this.bruteFormulaDisplay = 'bruteFormula';
+    this.enableAtLoad = false;
+    this.bruteFormulaDisplay = '';
     this.notValid = false;
   }
 
   convertSMILEStoBrute() {
-    try{
-      if(this.smiles === ''){
-        this.bruteFormulaDisplay = 'bruteFormula';
+    this.enableAtLoad = true;
+    try {
+      if (this.smiles === '') {
+        this.bruteFormulaDisplay = '';
         this.notValid = false;
         return;
       }
       const molecule = Molecule.fromSmiles(this.smiles);
       this.notValid = false;
       const regex = /([A-Z][a-z]*)(\d*)/g;
-      this.bruteFormulaDisplay = molecule.getMolecularFormula().formula.replace(regex, "<span class='atom'>$1</span><sub class='count'>$2</sub>");
-    }catch(e: any){
+      this.bruteFormulaDisplay = molecule
+        .getMolecularFormula()
+        .formula.replace(
+          regex,
+          "<span class='atom'>$1</span><sub class='count'>$2</sub>"
+        );
+    } catch (e: any) {
       this.notValid = true;
-      this.bruteFormulaDisplay = 'bruteFormula';
+      this.bruteFormulaDisplay = '';
       console.log(e.message.toString());
     }
     console.log(this.notValid);
-
   }
 
+  
 }
