@@ -33,7 +33,7 @@ export const FONT = {
 // Sample users
 export const users: User[] = [
     {
-        id: "1",
+        id: 1,
         username: "user1",
         email: "user1@example.com",
         password: "password",
@@ -48,7 +48,7 @@ export const users: User[] = [
         deleted_at: "null"
     },
     {
-        id: "2",
+        id: 2,
         username: "user2",
         email: "user2@example.com",
         password: "password",
@@ -63,7 +63,7 @@ export const users: User[] = [
         deleted_at: "null"
     },
     {
-        id: "3",
+        id: 3,
         username: "user3",
         email: "user3@example.com",
         password: "password",
@@ -82,7 +82,7 @@ export const users: User[] = [
 // Sample molecules
 export const molecules: Molecule[] = [
     {
-        id: "1",
+        id: 1,
         formula: "C6H12O6",
         molecularWeight: 180.16,
         logP: -2.52,
@@ -99,7 +99,7 @@ export const molecules: Molecule[] = [
         deleted_at: "null"
     },
     {
-        id: "2",
+        id: 2,
         formula: "C16H18N2O4S",
         molecularWeight: 346.39,
         logP: 2.57,
@@ -116,7 +116,7 @@ export const molecules: Molecule[] = [
         deleted_at: "null"
     },
     {
-        id: "3",
+        id: 3,
         formula: "C27H36O8",
         molecularWeight: 488.57,
         logP: 4.87,
@@ -138,30 +138,30 @@ export const molecules: Molecule[] = [
 // Sample requests
 export const requests: Request[] = [
     {
-        id: "1",
-        moleculeId: "C6H12O6",
-        userId: "1",
-        targetId: "1",
+        id: 1,
+        moleculeId: 1,
+        userId: 1,
+        targetId: 1,
         status: Status.Pending,
         created_at: "2022-03-20T15:25:00Z",
         updated_at: "2022-03-20T15:25:00Z",
         deleted_at: "null"
     },
     {
-        id: "2",
-        moleculeId: "C16H18N2O4S",
-        userId: "2",
-        targetId: "2",
+        id: 2,
+        moleculeId: 2,
+        userId: 2,
+        targetId: 2,
         status: Status.Succeeded,
         created_at: "2022-03-21T10:10:00Z",
         updated_at: "2022-03-21T10:10:00Z",
         deleted_at: "null"
     },
     {
-        id: "3",
-        moleculeId: "C27H36O8",
-        userId: "3",
-        targetId: "3",
+        id: 3,
+        moleculeId: 3,
+        userId: 3,
+        targetId: 3,
         status: Status.Denied,
         created_at: "2022-03-22T09:45:00Z",
         updated_at: "2022-03-22T09:45:00Z",
@@ -172,28 +172,31 @@ export const requests: Request[] = [
 // Sample results
 export const results: Result[] = [
     {
-        id: "1",
-        targetId: "1",
-        moleculeId: "C6H12O6",
+        id: 1,
+        targetId: 1,
+        moleculeId: 1,
         active: false,
+        confidence: 0.8,
         created_at: "2022-03-20T15:25:00Z",
         updated_at: "2022-03-20T15:25:00Z",
         deleted_at: "null"
     },
     {
-        id: "2",
-        targetId: "1",
-        moleculeId: "C16H18N2O4S",
+        id: 2,
+        targetId: 1,
+        moleculeId: 4,
         active: true,
+        confidence: 0.9,
         created_at: "2022-03-21T10:10:00Z",
         updated_at: "2022-03-21T10:10:00Z",
         deleted_at: "null"
     },
     {
-        id: "3",
-        targetId: "1",
-        moleculeId: "C27H36O8",
+        id: 3,
+        targetId: 1,
+        moleculeId: 3,
         active: true,
+        confidence: 0.97,
         created_at: "2022-03-22T09:45:00Z",
         updated_at: "2022-03-22T09:45:00Z",
         deleted_at: "null"
@@ -203,7 +206,7 @@ export const results: Result[] = [
 // Sample targets
 export const targets: Target[] = [
     {
-        id: "1",
+        id: 1,
         name: "Target1",
         description: "Target1 Description",
         created_at: "2022-03-20T15:25:00Z",

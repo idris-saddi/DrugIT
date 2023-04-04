@@ -1,7 +1,7 @@
 import { Role } from "./roles.enum";
 
 export class User {
-    id: string;
+    id: number;
 
     username: string;
     email: string;
@@ -18,7 +18,7 @@ export class User {
     deleted_at: string;
 
     constructor(
-        id = '',
+        id = 0,
         username = '',
         email = '',
         password = '',

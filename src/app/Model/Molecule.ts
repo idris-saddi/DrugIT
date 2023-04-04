@@ -1,5 +1,5 @@
 export class Molecule {
-  id: string;
+  id: number;
 
   formula: string;
 
@@ -19,7 +19,7 @@ export class Molecule {
   deleted_at: string;
 
   constructor(
-    id = '',
+    id = 0,
     formula = '',
     molecularWeight = 0,
     logP = 0,

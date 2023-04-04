@@ -1,5 +1,6 @@
 export class Target {
-    id: string;
+    id: number;
+    
     name: string;
     description: string;
 
@@ -8,7 +9,7 @@ export class Target {
     deleted_at: string;
 
     constructor(
-        id = '',
+        id = 0,
         name = '',
         description = '',
         created_at = '',

@@ -1,11 +1,11 @@
 import { Status } from "./status.enum";
 
 export class Request {
-    id: string;
+    id: number;
 
-    moleculeId: string;
-    userId: string;
-    targetId: string;
+    moleculeId: number;
+    userId: number;
+    targetId: number;
 
     status: Status;
 
@@ -14,10 +14,10 @@ export class Request {
     deleted_at: string;
 
     constructor(
-        id = '',
-        moleculeId = '',
-        userId = '',
-        targetId = '',
+        id = 0,
+        moleculeId = 0,
+        userId = 0,
+        targetId = 0,
         status = Status.Pending,
         created_at = '',
         updated_at = '',
