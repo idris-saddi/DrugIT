@@ -1,8 +1,9 @@
 .footer {
+  height: 200px;
   padding-top: 3rem;
   padding-bottom: 3rem;
   /* allways in the bottom */
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
     width: 100%;
 }

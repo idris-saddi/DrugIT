@@ -17,6 +17,9 @@ import { Molecule } from 'openchemlib';
 
 import 'bootstrap';
 import { FormsModule } from '@angular/forms';
+import { MoleculeInfoComponent } from './outputPage/molecule-info/molecule-info.component';
+import { ResultCardComponent } from './outputPage/result-card/result-card.component';
+import { MoleculeDrawComponent } from './outputPage/molecule-draw/molecule-draw.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,9 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     FooterComponent,
     InputBoxComponent,
+    MoleculeInfoComponent,
+    ResultCardComponent,
+    MoleculeDrawComponent,
   ],
   imports: [
     BrowserModule,
