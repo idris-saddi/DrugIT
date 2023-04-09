@@ -1,0 +1,58 @@
+.card {
+  color: #fff;
+  width: 350px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #442578dd, #d6d2e1dd);
+  border: none;
+}
+
+.neo-button {
+  width: 40px;
+  height: 40px;
+  outline: 0 !important;
+  cursor: pointer;
+  color: #fff;
+  font-size: 15px;
+  border: none;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: linear-gradient(189deg,#1681A0, #7FB2C8, #d6d2e1);
+  box-shadow: inset 2px 2px 6px #7FB2C8, inset -2px -2px 6px #d6d2e1;
+}
+
+.num {
+  color: #eee !important;
+}
+
+.line {
+  color: #fff;
+}
+
+.neo-button:active {
+  border-radius: 50%;
+  background: #1681A0;
+  box-shadow: 5px 5px 7px #1681A060, -5px -5px 7px #1682a060;
+}
+
+.profile_button{
+  color: #fff;
+  padding: 10px;
+  border: none;
+  outline: 0 !important;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #7FB2C8, #d6d2e1);
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: inset 2px 2px 6px #7FB2C8, inset -2px -2px 6px #d6d2e1;
+}
+
+.profile_button:active {
+  color: #fff;
+  padding: 10px;
+  border: none;
+  outline: 0 !important;
+  border-radius: 50px;
+  background: #1681A0;
+  box-shadow: 10px 10px 15px #7FB2C8, -10px -10px 15px #7FB2C8;
+}
