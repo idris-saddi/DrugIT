@@ -1,0 +1,27 @@
+<div class="container justify-content-center contact">
+    <mat-dialog-content>
+        <form>
+            <div class="form-group">
+                <mat-form-field>
+                    <input matInput class="form-control" placeholder="Object" [(ngModel)]="object" name="object" required>
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                <mat-form-field>
+                    <input matInput class="form-control" placeholder="Email" [(ngModel)]="email" name="email" required>
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                <mat-form-field>
+                    <textarea matInput class="form-control" placeholder="Message" [(ngModel)]="message" name="message"
+                        required></textarea>
+                </mat-form-field>
+            </div>
+        </form>
+    </mat-dialog-content>
+    <mat-dialog-actions class="container d-flex">
+        <button mat-button class="btn btn-secondary me-auto" (click)="onNoClick()">Cancel</button>
+        <button mat-button class="btn btn-primary" [mat-dialog-close]="{email: email, message: message}"
+            [disabled]="!email || !message">Send</button>
+    </mat-dialog-actions>
+</div>
