@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { User } from 'src/app/Model/User';
 
 @Component({
   selector: 'app-profile-info-card',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./profile-info-card.component.css']
 })
 export class ProfileInfoCardComponent {
+  @Input() data: any;
+
+  
+
 
 }

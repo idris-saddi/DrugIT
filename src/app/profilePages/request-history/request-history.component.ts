@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Request } from 'src/app/Model/Request';
 
 @Component({
   selector: 'app-request-history',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./request-history.component.css']
 })
 export class RequestHistoryComponent {
+  @Input() data: any;
 
 }
