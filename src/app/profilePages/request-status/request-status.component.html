@@ -1,16 +1,17 @@
 <div>
-    <h3 class="list-group-item-heading BRUT">
-        {{ req.molecule.formula }}
-        <span class="badge rounded-pill bg-danger">{{req.status}}</span>
+    <h3 class="list-group-item-heading BRUT ">
+        {{ molecule.formula }}
+        <span class="badge rounded-pill" [class]="getClassSpan()">{{req.status}}</span>
     </h3>
-
-    <div class="row">
-        <span class="card-title col-3">Target : </span>
-        <span class="card-text col-9">{{req.Target}}</span>
-    </div>
-
-    <div class="row">
-        <span class="card-title col-3">date : </span>
-        <span class="card-text col-9">{{ req.created_at }}</span>
+    <div>
+        <div class="row">
+            <span class="card-title col-3">Target : </span>
+            <span class="card-text col-9">{{req.Target}}</span>
+        </div>
+    
+        <div class="row">
+            <span class="card-title col-3">date : </span>
+            <span class="card-text col-9">{{ req.created_at }}</span>
+        </div>
     </div>
 </div>

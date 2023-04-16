@@ -40,9 +40,12 @@ export const users: User[] = [
         salt: "salt",
         organization: "Org1",
         role: Role.Admin,
-        subscription: "Premium",
+        subscription: 5,
         image: "https://randomuser.me/api/portraits/women/1.jpg",
         phone: "123-456-7890",
+        facebooklink: "https://www.facebook.com/",
+        twitterlink: "",
+        linkedinlink: "https://www.linkedin.com/",
         created_at: "2022-03-20T15:25:00Z",
         updated_at: "2022-03-20T15:25:00Z",
         deleted_at: "null"
@@ -55,9 +58,12 @@ export const users: User[] = [
         salt: "salt",
         organization: "Org2",
         role: Role.Client,
-        subscription: "Basic",
+        subscription: -1,
         image: "https://randomuser.me/api/portraits/men/1.jpg",
         phone: "456-789-0123",
+        facebooklink: "",
+        twitterlink: "https://twitter.com/",
+        linkedinlink: "https://www.linkedin.com/",
         created_at: "2022-03-21T10:10:00Z",
         updated_at: "2022-03-21T10:10:00Z",
         deleted_at: "null"
@@ -70,9 +76,12 @@ export const users: User[] = [
         salt: "salt",
         organization: "Org3",
         role: Role.Client,
-        subscription: "Premium",
+        subscription: -2,
         image: "https://randomuser.me/api/portraits/women/2.jpg",
         phone: "789-012-3456",
+        facebooklink: "https://www.facebook.com/",
+        twitterlink: "https://twitter.com/",
+        linkedinlink: "https://www.linkedin.com/",
         created_at: "2022-03-22T09:45:00Z",
         updated_at: "2022-03-22T09:45:00Z",
         deleted_at: "null"
@@ -165,6 +174,16 @@ export const requests: Request[] = [
         status: Status.Denied,
         created_at: "2022-03-22T09:45:00Z",
         updated_at: "2022-03-22T09:45:00Z",
+        deleted_at: "null"
+    },
+    {
+        id: 4,
+        moleculeId: 2,
+        userId: 1,
+        targetId: 1,
+        status: Status.Pending,
+        created_at: "2022-03-23T09:45:00Z",
+        updated_at: "2022-03-23T09:45:00Z",
         deleted_at: "null"
     }
 ];

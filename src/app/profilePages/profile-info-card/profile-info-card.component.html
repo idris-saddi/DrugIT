@@ -1,8 +1,7 @@
 <div class="card p-3 m-auto">
     <div class="text-center">
-        <img src="https://i.imgur.com/stD0Q19.jpg" width="150" class="rounded-circle">
-        <h3 class="mt-2"> {{ data.user.data.username }} </h3>
-        <span class="mt-1 clearfix"> {{ data.user.organization }} </span>
+        <img [src]="data.user.image" width="150" class="rounded-circle">
+        <h3 class="mt-2"> {{ data.user.username }} </h3>
 
         <div class="row mt-3 mb-3">
 
@@ -16,20 +15,37 @@
             </div>
             <div class="col-md-4">
                 <h5>Subscription</h5>
-                <span class="num">{{ data.user.subscription }}</span>
+                <!-- if subs == -1 then show PRO if == -2 then ENTREPRISE else show subs -->
+                <span class="num">
+                    {{ data.user.subscription == -1 ? 'PRO' : data.user.subscription == -2 ? 'ENTREPRISE' : data.user.subscription }}
+                </span>
+                <!-- <span class="num">{{ data.user.subscription }}</span> -->
             </div>
 
         </div>
 
         <hr class="line">
 
-        <small class="mt-4">I am an android developer working at google Inc at california,USA</small>
+        <span class="clearfix"> {{ data.user.email }} </span>
+        <span class="clearfix"> {{ data.user.organization }} </span>
+        <span class="clearfix"> {{ data.user.phone }} </span>
+
         <div class="social-buttons mt-5">
-            <button class="neo-button"><i class="bi bi-facebook fa-1x"></i> </button>
-            <button class="neo-button"><i class="bi bi-linkedin fa-1x"></i></button>
-            <button class="neo-button"><i class="bi bi-google fa-1x"></i> </button>
-            <button class="neo-button"><i class="bi bi-youtube fa-1x"></i> </button>
-            <button class="neo-button"><i class="bi bi-twitter fa-1x"></i> </button>
+            <a [href]="data.user.linkedinlink" *ngIf="data.user.facebooklink">
+                <button class="neo-button">
+                    <i class="bi bi-facebook fa-1x"></i>
+                </button>
+            </a>
+            <a [href]="data.user.twitterlink" *ngIf="data.user.twitterlink">
+                <button class="neo-button">
+                    <i class="bi bi-twitter fa-1x"></i>
+                </button>
+            </a>
+            <a [href]="data.user.linkedinlink" *ngIf="data.user.linkedinlink">
+                <button class="neo-button">
+                    <i class="bi bi-linkedin fa-1x"></i>
+                </button>
+            </a>
         </div>
 
         <div class="profile mt-5">

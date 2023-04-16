@@ -9,9 +9,14 @@ export class User {
     salt: string;
     organization: string;
     role: Role;
-    subscription: string;
+    subscription: number;
     image: string;
     phone: string;
+
+    facebooklink: string;
+    twitterlink: string;
+    linkedinlink:string;
+
 
     created_at: string;
     updated_at: string;
@@ -25,9 +30,12 @@ export class User {
         salt = '',
         organization = '',
         role = Role.Client,
-        subscription = '',
+        subscription = 0,
         image = '',
         phone = '',
+        facebooklink = '',
+        twitterlink = '',
+        linkedinlink = '',
         created_at = '',
         updated_at = '',
         deleted_at = ''
@@ -42,6 +50,9 @@ export class User {
         this.subscription = subscription;
         this.image = image;
         this.phone = phone;
+        this.facebooklink = facebooklink;
+        this.twitterlink = twitterlink;
+        this.linkedinlink = linkedinlink;
         this.created_at = created_at;
         this.updated_at = updated_at;
         this.deleted_at = deleted_at;

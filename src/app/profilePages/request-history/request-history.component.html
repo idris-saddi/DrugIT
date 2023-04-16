@@ -1,10 +1,13 @@
-<div class="card">
+<div class="">
     <div>
         <h3 class="card-header d-flex justify-content-center">Request History</h3>
     </div>
     <ul class="list-group">
         <li *ngFor="let req of data.requests" class="list-group-item mt-2">
             <app-request-status [req]="req"></app-request-status>
+        </li>
+        <li *ngIf="data.requests.length === 0" class="list-group-item">
+            <p class="text-center">No requests found</p>
         </li>
     </ul>
 </div>

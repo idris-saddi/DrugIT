@@ -1,18 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Status } from 'src/app/Model/status.enum';
-import { users, molecules, requests } from 'src/constants';
+import { users, requests } from 'src/constants';
 
 @Component({
   selector: 'app-profile-page',
   templateUrl: './profile-page.component.html',
   styleUrls: ['./profile-page.component.css']
 })
-export class ProfilePageComponent {
+export class ProfilePageComponent implements OnInit {
+  id = 2;
+
   data = {
-    user : users[0],
-    molecules : molecules,
-    requests : requests,
-    numRequests : requests.length,
-    acceptedRequests : requests.filter(req => req.status === Status.Succeeded),
+    user : users.find(user => user.id === this.id),
+    requests : requests.filter(req => req.userId === this.id),
+    numRequests : requests.filter(req => req.userId === this.id).length,
+    acceptedRequests : requests.filter(req => req.status === Status.Succeeded).length,
+  }
+
+  ngOnInit(): void {
+    console.log("data from ProfilePageComponent\n");
+    console.log(this.data);
   }
 }
