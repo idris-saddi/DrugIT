@@ -7,11 +7,12 @@ export class User {
     email: string;
     password: string;
     salt: string;
-    organization: string;
+    organisation: string;
     role: Role;
     subscription: number;
     image: string;
     phone: string;
+    birthdate: Date ;
 
     facebooklink: string;
     twitterlink: string;
@@ -28,11 +29,12 @@ export class User {
         email = '',
         password = '',
         salt = '',
-        organization = '',
+        organisation = '',
         role = Role.Client,
         subscription = 0,
         image = '',
         phone = '',
+        birthdate = new Date("2000-01-01T00:00:00Z"),
         facebooklink = '',
         twitterlink = '',
         linkedinlink = '',
@@ -45,11 +47,12 @@ export class User {
         this.email = email;
         this.password = password;
         this.salt = salt;
-        this.organization = organization;
+        this.organisation = organisation;
         this.role = role;
         this.subscription = subscription;
         this.image = image;
         this.phone = phone;
+        this.birthdate = birthdate;
         this.facebooklink = facebooklink;
         this.twitterlink = twitterlink;
         this.linkedinlink = linkedinlink;
