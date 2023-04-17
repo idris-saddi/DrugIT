@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { results, molecules } from 'src/constants';
 
 @Component({
   selector: 'app-output-page',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./output-page.component.css']
 })
 export class OutputPageComponent {
+  id = 0;
+
+  result= results[this.id];
+  molecule = molecules.find(molecule => molecule.id === this.result.moleculeId);
+
 
 }

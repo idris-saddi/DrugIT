@@ -8,7 +8,7 @@ import { users, requests } from 'src/constants';
   styleUrls: ['./profile-page.component.css']
 })
 export class ProfilePageComponent implements OnInit {
-  id = 2;
+  id = 1;
 
   data = {
     user : users.find(user => user.id === this.id),

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Molecule } from 'src/app/Model/Molecule';
 
 @Component({
   selector: 'app-molecule-info',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./molecule-info.component.css']
 })
 export class MoleculeInfoComponent {
-
+  @Input() molecule: any;
 }
