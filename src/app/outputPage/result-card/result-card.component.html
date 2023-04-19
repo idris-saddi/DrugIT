@@ -20,21 +20,20 @@
 
             <div class="row">
                 <span class="card-title col-3">Class : </span>
-                
+
                 <span class="card-text col-9" *ngIf="result.active" [class]="getClassSpan2()">True</span>
                 <span class="card-text col-9" *ngIf="!result.active" [class]="getClassSpan2()">False</span>
             </div>
         </div>
         <div class="col-4">
-            <div class="progress" [class]="getClassSpan()"> 
-                <span class="progress-left">
-                    <span class="progress-bar"></span>
-                </span>
-                <span class="progress-right">
-                    <span class="progress-bar"></span>
-                </span>
-                <div class="progress-value">{{ result.confidence * 100 }}%</div>
-            </div>
+            <apx-chart 
+                [series]="chartOptions.series"
+                [chart]="chartOptions.chart"
+                [plotOptions]="chartOptions.plotOptions" 
+                [labels]="chartOptions.labels" 
+                [stroke]="chartOptions.stroke"
+                [fill]="chartOptions.fill">
+            </apx-chart>
         </div>
     </div>
 </div>

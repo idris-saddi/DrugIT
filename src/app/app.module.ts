@@ -24,6 +24,7 @@ import { RequestStatusComponent } from './profilePages/request-status/request-st
 import { ContactComponent } from './globalComponent/contact/contact.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { NgApexchartsModule } from "ng-apexcharts";
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatDialogModule,
     ReactiveFormsModule,
     MatFormFieldModule,
+    NgApexchartsModule
     
   ],
   providers: [],
