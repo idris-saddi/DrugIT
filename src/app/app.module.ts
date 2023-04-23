@@ -25,6 +25,8 @@ import { ContactComponent } from './globalComponent/contact/contact.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { NgApexchartsModule } from "ng-apexcharts";
+import { OurServicesComponent } from './homePage/our-services/our-services.component';
+import { AboutusComponent } from './homePage/aboutus/aboutus.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,8 @@ import { NgApexchartsModule } from "ng-apexcharts";
     RequestHistoryComponent,
     RequestStatusComponent,
     ContactComponent,
+    OurServicesComponent,
+    AboutusComponent,
   ],
   imports: [
     BrowserModule,

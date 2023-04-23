@@ -1,9 +1,10 @@
-<div class="container justify-content-center contact">
-    <mat-dialog-content>
-        <form>
+<div class="container justify-content-center contact w-100">
+    <h1 class="justify-content-center"> Contact Us</h1>
+    <mat-dialog-content class="container d-flex">
+        <form class="m-auto">
             <div class="form-group">
                 <mat-form-field>
-                    <input matInput class="form-control" placeholder="Object" [(ngModel)]="object" name="object" required>
+                    <input matInput class="form-control" placeholder="Object" [(ngModel)]="object" name="object" style="width: 100%;" required>
                 </mat-form-field>
             </div>
             <div class="form-group">
@@ -21,7 +22,7 @@
     </mat-dialog-content>
     <mat-dialog-actions class="container d-flex">
         <button mat-button class="btn btn-secondary me-auto" (click)="onNoClick()">Cancel</button>
-        <button mat-button class="btn btn-primary" [mat-dialog-close]="{email: email, message: message}"
+        <button mat-button class="btn btn-primary" [mat-dialog-close]="{object:object, email: email, message: message}"
             [disabled]="!email || !message">Send</button>
     </mat-dialog-actions>
 </div>
