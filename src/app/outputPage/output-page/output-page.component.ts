@@ -1,6 +1,7 @@
 import { Component} from '@angular/core';
 import { results, molecules } from 'src/constants';
 import { ActivatedRoute, Router } from '@angular/router';
+import {HttpClient} from "@angular/common/http";
 
 
 @Component({
@@ -10,12 +11,21 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class OutputPageComponent {
   smiles:string;
-  constructor(private route: ActivatedRoute, router: Router,) { 
+  returned: any;
+  constructor(private route: ActivatedRoute, router: Router, private http:HttpClient) { 
     this.smiles=""
     this.route.params.subscribe(params => {
       this.smiles = params['value'];
       console.log(this.smiles);
     });
+  }
+
+  async ngOnInit() {
+    this.http.post<any>("http://localhost:8000/predict", {canonical_smiles:this.smiles}).subscribe((response: any) => {
+      this.returned=response;
+      console.log(response);
+    });
+    console.log(this.returned)
   }
 
   id = 0;
