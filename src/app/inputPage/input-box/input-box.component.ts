@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Molecule } from 'openchemlib';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-input-box',
@@ -12,11 +13,15 @@ export class InputBoxComponent {
   bruteFormulaDisplay: string;
   enableAtLoad: boolean;
 
-  constructor() {
+  constructor(private _router: Router) {
     this.smiles = '';
     this.enableAtLoad = false;
     this.bruteFormulaDisplay = '';
     this.notValid = false;
+  }
+
+  getResults(){
+    this._router.navigate(['/output',{value:this.smiles}])
   }
 
   convertSMILEStoBrute() {
