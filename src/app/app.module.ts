@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppComponent } from './app.component';
 import { OutputPageComponent } from './outputPage/output-page/output-page.component';
@@ -27,6 +30,19 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { NgApexchartsModule } from "ng-apexcharts";
 import { OurServicesComponent } from './homePage/our-services/our-services.component';
 import { AboutusComponent } from './homePage/aboutus/aboutus.component';
+
+
+const appRoutes: Routes = [
+  { path: 'profile', component: ProfilePageComponent },
+  { path: 'login', component: LoginPageComponent },
+  { path: 'input', component: InputPageComponent },
+  { path: 'output', component: OutputPageComponent },
+  { path: 'profile/edit', component: ProfileEditComponent },
+  { path: 'signup', component: SignupPageComponent },
+  { path: 'subscription', component: SubscriptionPageComponent },
+  { path: 'home', component: HomePageComponent },
+  { path: '',   redirectTo: '/home', pathMatch: 'full' },
+];
 
 @NgModule({
   declarations: [
@@ -56,12 +72,16 @@ import { AboutusComponent } from './homePage/aboutus/aboutus.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     MatDialogModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    NgApexchartsModule
-    
+    NgApexchartsModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
