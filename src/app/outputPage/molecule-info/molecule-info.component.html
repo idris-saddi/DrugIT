@@ -1,77 +1,77 @@
 <div class="card mb-3">
     <div class="card-header">
         <h5 class="mb-0 text-secondary">Molecule Info</h5>
-        <p class="mb-0 brut">{{ molecule.formula }}</p>
+        <p class="mb-0 brut">{{ molecule?.canonical_smiles }}</p>
     </div>
     <div class="card-body">
         <div class="row">
             <div class="col-sm-8">
                 <h6 class="mb-0">molecular Weight</h6>
             </div>
-            <div class="col-sm-4 text-secondary">{{ molecule.molecularWeight }}</div>
+            <div class="col-sm-4 text-secondary">{{ molecule?.MW | number:'1.3-3'}}</div>
         </div>
         <hr />
         <div class="row">
             <div class="col-sm-8">
                 <h6 class="mb-0">logP</h6>
             </div>
-            <div class="col-sm-4 text-secondary">{{ molecule.logP }}</div>
+            <div class="col-sm-4 text-secondary">{{ molecule?.LogP | number:'1.3-3'}}</div>
         </div>
         <hr />
         <div class="row">
             <div class="col-sm-8">
                 <h6 class="mb-0">num H Donors</h6>
             </div>
-            <div class="col-sm-4 text-secondary">{{ molecule.numHDonors }}</div>
+            <div class="col-sm-4 text-secondary">{{ molecule?.NumHDonors }}</div>
         </div>
         <hr />
         <div class="row">
             <div class="col-sm-8">
                 <h6 class="mb-0">num H Acceptors</h6>
             </div>
-            <div class="col-sm-4 text-secondary">{{ molecule.numHAcceptors }}</div>
+            <div class="col-sm-4 text-secondary">{{ molecule?.NumHAcceptors }}</div>
         </div>
         <hr />
         <div class="row">
             <div class="col-sm-8">
                 <h6 class="mb-0">pIC50</h6>
             </div>
-            <div class="col-sm-4 text-secondary">{{ molecule.pIC50 }}</div>
+            <div class="col-sm-4 text-secondary">{{ molecule?.pIC50 || 0 }}</div>
         </div>
         <hr />
         <div class="row">
             <div class="col-sm-8">
                 <h6 class="mb-0">Num Heavy Atoms</h6>
             </div>
-            <div class="col-sm-4 text-secondary">{{ molecule.NumHeavyAtoms }}</div>
+            <div class="col-sm-4 text-secondary">{{ molecule?.NumHeavyAtoms }}</div>
         </div>
         <hr />
         <div class="row">
             <div class="col-sm-8">
                 <h6 class="mb-0">num Chiral Centers List</h6>
             </div>
-            <div class="col-sm-4 text-secondary">{{ molecule.numChiralCentersList }}</div>
+            <div class="col-sm-4 text-secondary">{{ molecule?.num_chiral_centers_list }}</div>
         </div>
         <hr />
         <div class="row">
             <div class="col-sm-8">
                 <h6 class="mb-0">polarizabilities</h6>
             </div>
-            <div class="col-sm-4 text-secondary">{{ molecule.polarizabilities }}</div>
+            <div class="col-sm-4 text-secondary">{{ molecule?.polarizabilities || 0 }}</div>
         </div>
         <hr />
         <div class="row">
             <div class="col-sm-8">
                 <h6 class="mb-0">num Rings</h6>
             </div>
-            <div class="col-sm-4 text-secondary">{{ molecule.numRings }}</div>
+            <div class="col-sm-4 text-secondary">{{ molecule?.num_rings }}</div>
         </div>
         <hr />
         <div class="row">
             <div class="col-sm-8">
                 <h6 class="mb-0">rotable Bonds</h6>
             </div>
-            <div class="col-sm-4 text-secondary">{{ molecule.rotableBonds }}</div>
+            <div class="col-sm-4 text-secondary">{{ molecule?.rotatable_bonds }}</div>
         </div>
     </div>
 </div>

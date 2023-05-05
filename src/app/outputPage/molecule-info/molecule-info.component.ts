@@ -8,4 +8,5 @@ import { Molecule } from 'src/app/Model/Molecule';
 })
 export class MoleculeInfoComponent {
   @Input() molecule: any;
+
 }

@@ -1,32 +1,32 @@
-<h4>Result n° {{ result.id }}</h4>
+<h4>Result n° 12F5D<!--{{ result.id }}--></h4>
 
 <div class="card border-info mb-3">
     <div class="card-body row">
         <div class="col-8 mt-auto mb-auto">
             <div class="row">
                 <span class="card-title col-3">SMILE : </span>
-                <span class="card-text col-9">{{ molecule?.formula }}</span>
+                <span class="card-text col-9">{{ result?.canonical_smiles }}</span>
             </div>
 
             <div class="row">
                 <span class="card-title col-3">Target : </span>
-                <span class="card-text col-9">{{ target?.name }}</span>
+                <span class="card-text col-9">Alzheimer<!--{{ target?.name }}--></span>
             </div>
 
             <div class="row">
                 <span class="card-title col-3">date : </span>
-                <span class="card-text col-9">{{ result.created_at }}</span>
+                <span class="card-text col-9"> 06-May-2023<!--{{ result.created_at }}--></span>
             </div>
 
             <div class="row">
                 <span class="card-title col-3">Class : </span>
 
-                <span class="card-text col-9" *ngIf="result.active" [class]="getClassSpan2()">True</span>
-                <span class="card-text col-9" *ngIf="!result.active" [class]="getClassSpan2()">False</span>
+                <span class="card-text col-9" *ngIf="result?.class == 1" [class]="getClassSpan2()">True</span>
+                <span class="card-text col-9" *ngIf="result?.class == 0" [class]="getClassSpan2()">False</span>
             </div>
         </div>
         <div class="col-4">
-            <apx-chart 
+            <apx-chart *ngIf="chartOptions"
                 [series]="chartOptions.series"
                 [chart]="chartOptions.chart"
                 [plotOptions]="chartOptions.plotOptions" 

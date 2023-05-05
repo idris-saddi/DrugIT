@@ -31,7 +31,6 @@ import { NgApexchartsModule } from "ng-apexcharts";
 import { OurServicesComponent } from './homePage/our-services/our-services.component';
 import { AboutusComponent } from './homePage/aboutus/aboutus.component';
 
-
 const appRoutes: Routes = [
   { path: 'profile', component: ProfilePageComponent },
   { path: 'login', component: LoginPageComponent },

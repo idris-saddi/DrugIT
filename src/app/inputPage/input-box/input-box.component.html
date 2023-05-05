@@ -21,9 +21,8 @@
             aria-label="Default select example"
           >
             <option disabled selected>Target</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <!-- <option [value]="1">Alzheimer</option> -->
+            <option *ngFor="let target of targets" [value]="target.id">{{ target.name }}</option>
           </select>
         </div>
       </div>

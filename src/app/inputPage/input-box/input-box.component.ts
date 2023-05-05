@@ -1,30 +1,37 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Molecule } from 'openchemlib';
 import { Router } from '@angular/router';
+import { Target } from 'src/app/Model/Target';
+import { targets } from 'src/constants';
+import { InputBoxService } from './input-box.service';
 
 @Component({
   selector: 'app-input-box',
   templateUrl: './input-box.component.html',
   styleUrls: ['./input-box.component.css'],
 })
-export class InputBoxComponent {
+export class InputBoxComponent implements OnInit{
   @Input() smiles: string;
   notValid: boolean;
   bruteFormulaDisplay: string;
   enableAtLoad: boolean;
+  targets: Target[] | undefined;
 
-  constructor(private _router: Router) {
+  constructor(private _router: Router, private inputBoxService: InputBoxService) {
     this.smiles = '';
     this.enableAtLoad = false;
     this.bruteFormulaDisplay = '';
     this.notValid = false;
   }
 
+  ngOnInit(): void {
+  }
+
   getResults(){
     this._router.navigate(['/output',{value:this.smiles}])
   }
 
-  convertSMILEStoBrute() {
+  convertSMILEStoBrute() : void {
     this.enableAtLoad = true;
     try {
       if (this.smiles === '') {
@@ -48,6 +55,8 @@ export class InputBoxComponent {
     }
     console.log(this.notValid);
   }
+
+  
 
   
 }

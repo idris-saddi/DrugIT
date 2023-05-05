@@ -19,7 +19,8 @@
           </li>
         </ul>
         <div class="d-flex">
-          <a class="btn btn-secondary my-2 my-sm-0" routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">Login</a>
+          <a class="btn btn-secondary my-2 my-sm-0" *ngIf="!isLoggedIn" routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">Login</a>
+          <a class="btn btn-secondary my-2 my-sm-0" *ngIf="isLoggedIn" (click)="logout()">logout</a>
         </div>
       </div>
     </div>

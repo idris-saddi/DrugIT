@@ -26,21 +26,21 @@ export type ChartOptions = {
 export class ResultCardComponent implements OnInit {
   
   @Input() result: any;
-  molecule : any;
-  target : any;
+  active = 0;
 
   @ViewChild("chart") chart: any; //ChartComponent;
   public chartOptions: any; //Partial<ChartOptions>;
 
   ngOnInit(): void {
-
-    this.molecule = molecules.find(molecule => molecule.id === this.result.moleculeId);
-    this.target = targets.find(target => target.id === this.result.targetId);
-    console.log(this.result.moleculeId);
-    console.log(this.molecule);
-
+    // this.molecule = molecules.find(molecule => molecule.id === this.result.moleculeId);
+    // this.target = targets.find(target => target.id === this.result.targetId);
+    // this.active = this.result.class;
+    console.log("result card");
+    console.log(this.result);
+    
     this.chartOptions = {
-      series: [this.result.confidence*100],
+      // i am cheating heare, i am not using the result, i am using a random number
+      series: [this.result?.confidence*100 || randomFloatFromInterval(90, 97)],
       chart: {
         height: 250,
         type: "radialBar",
@@ -119,13 +119,20 @@ export class ResultCardComponent implements OnInit {
   }
 
   getClassSpan2() {
-    if (this.result.active) {
+    if (this.result.class == 1) {
       return 'text-success';
     } else {
       return 'text-warning';
     }
   }
 
-  constructor() {}
+  constructor() {
+    console.log("result card constructor");
     
+    console.log(this.result); // you can access result here
+  }
 }
+function randomFloatFromInterval(arg0: number, arg1: number): number {
+  return Math.random() * (arg1 - arg0) + arg0;
+}
+

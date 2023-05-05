@@ -23,6 +23,8 @@ export class OutputPageComponent {
   async ngOnInit() {
     this.http.post<any>("http://localhost:8000/predict", {canonical_smiles:this.smiles}).subscribe((response: any) => {
       this.returned=response;
+      this.smiles=response.canonical_smiles;
+      
       console.log(response);
     });
     console.log(this.returned)
